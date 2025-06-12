@@ -1,22 +1,20 @@
+---
+	import "../styles/global.css";
+	import { getLangFromUrl } from '../i18n/utils';
+	import LanguagePicker from "../components/LanguagePicker.astro";
+	const lang = getLangFromUrl(Astro.url);
+---
+
 <!doctype html>
-<html lang="en">
+<html lang={lang} class="m-0 p-0">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/svg+xml" href="/coffeeIcon.svg" />
+		<meta name="generator" content="Novela Visual por Pushtidarling" />
+		<title>Drop of Cafe</title>
 	</head>
-	<body>
+	<body class="w-full h-screen m-0 p-0 bg-[#f7e8bf]">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

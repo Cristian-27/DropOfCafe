@@ -1,0 +1,13 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath (lang as any);
+---
+<select class="bg-[#584241] text-yellow-100 rounded px-2 py-2 ml-5" onchange="location = this.value">
+  {Object.entries(languages).map(([lang, label]) => (
+    <option>
+      <a href={`/${lang}/`}>{label}</a>
+    </option>
+  ))}
+</select>
