@@ -1,2 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'CheeseBurger';
+  src: url('/CheeseBurger.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-cheese: "CheeseBurger", "sans-serif"; 
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2px black;
+  color: white;
+}

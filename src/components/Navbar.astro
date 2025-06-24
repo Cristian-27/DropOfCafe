@@ -1,12 +1,10 @@
 ---
   const { lang, t } = Astro.props;
   import LanguagePicker from '../components/LanguagePicker.astro';
-
 ---
-
 <nav class="bg-[#584241] border-b border-yellow-300 px-4 py-3 md:flex md:items-center md:justify-between">
   <div class="flex items-center justify-between">
-    <span class="text-xl font-bold text-yellow-100">Drop of Cafe</span>
+    <span class="font-cheese text-xl font-bold text-yellow-100">Drop of Cafe</span>
     <LanguagePicker lang={lang} />
     
     <input type="checkbox" id="menu-toggle" class="hidden peer" />
@@ -19,8 +17,8 @@
   </div>
 
   <div class="hidden peer-checked:flex flex-col md:flex md:flex-row md:items-center mt-3 md:mt-0 space-y-2 md:space-y-0 md:space-x-6" id="menu">
-    <a href="#" class="text-yellow-200 hover:text-yellow-600">{t('navItem1')}</a>
-    <a href="#" class="text-yellow-200 hover:text-yellow-600">{t('navItem2')}</a>
-    <a href="#" class="text-yellow-200 hover:text-yellow-600">{t('navItem3')}</a>
+    <a href="#" class="text-yellow-200 text-xl hover:text-yellow-600 border-b-amber-950">{t('navItem1')}</a>
+    <a href="#" class="text-yellow-200 text-xl hover:text-yellow-600">{t('navItem2')}</a>
+    <a href="#" class="text-yellow-200 text-xl hover:text-yellow-600">{t('navItem3')}</a>
   </div>
 </nav>

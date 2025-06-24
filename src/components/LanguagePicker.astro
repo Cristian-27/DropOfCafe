@@ -3,7 +3,7 @@ import { languages, ui } from '../i18n/ui';
 const { lang } = Astro.props;
 ---
 
-<select onchange="location.href = this.value" class="bg-yellow-200 p-1 rounded-xl ml-2"
+<select onchange="location.href = this.value" class="bg-yellow-200 p-1 rounded-xl ml-2 text-amber-950 font-semibold hover: cursor-pointer"
 >
   {
     Object.entries(languages).map(([code, label]) => (
