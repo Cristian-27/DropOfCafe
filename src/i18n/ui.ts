@@ -4,19 +4,21 @@ export const languages = {
   ru: 'Русский',
 };
 
-export const defaultLang = 'es';
+export const defaultLang = 'en';
+
+export const showDefaultLang = true;
 
 export const ui ={
 
     en:{
-        'navItem1': 'Home',
-        'navItem2': 'About',
-        'navItem3': 'Contact',
+    'navItem1': 'Home',
+    'navItem2': 'About',
+    'navItem3': 'Contact',
     },
     es:{
-        'navItem1': 'Inicio',
-        'navItem2': 'Acerca de',
-        'navItem3': 'Contacto',
+    'navItem1': 'Inicio',
+    'navItem2': 'Acerca de',
+    'navItem3': 'Contacto',
     },
     ru:{
         'navItem1': 'Главная',
@@ -24,5 +26,3 @@ export const ui ={
         'navItem3': 'Контакты',
     }
 } as const;
-
-export const showDefaultLang = false;

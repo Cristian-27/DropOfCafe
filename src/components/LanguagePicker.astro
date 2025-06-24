@@ -1,13 +1,18 @@
 ---
-import { languages } from '../i18n/ui';
-import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
-const lang = getLangFromUrl(Astro.url);
-const translatePath = useTranslatedPath (lang as any);
+import { languages, ui } from '../i18n/ui';
+const { lang } = Astro.props;
 ---
-<select class="bg-[#584241] text-yellow-100 rounded px-2 py-2 ml-5" onchange="location = this.value">
-  {Object.entries(languages).map(([lang, label]) => (
-    <option>
-      <a href={`/${lang}/`}>{label}</a>
-    </option>
-  ))}
+
+<select onchange="location.href = this.value" class="bg-yellow-200 p-1 rounded-xl ml-2"
+>
+  {
+    Object.entries(languages).map(([code, label]) => (
+      <option
+        value={`/${code}/`}
+        selected={code === lang}
+      >
+        {label}
+      </option>
+    ))
+  }
 </select>
